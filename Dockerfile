@@ -1,6 +1,6 @@
 FROM phusion/baseimage
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y screen wget
+RUN apt-get update && apt-get upgrade --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && apt-get install --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" screen wget
 
 RUN dpkg --add-architecture i386
 
