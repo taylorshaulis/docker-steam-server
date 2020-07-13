@@ -14,4 +14,6 @@ RUN wget http://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 
 RUN tar -xvzf steamcmd_linux.tar.gz && rm steamcmd_linux.tar.gz
 
+ADD l4d2.sh /l4d2.sh
+
 CMD ["/sbin/my_init"]
